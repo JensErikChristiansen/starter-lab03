@@ -4,11 +4,11 @@
  * Our homepage. Show a table of all the author pictures. Clicking on one should show their quote.
  * Our quotes model has been autoloaded, because we use it everywhere.
  * 
- * controllers/Sleep.php
+ * controllers/Guess.php
  *
  * ------------------------------------------------------------------------
  */
-class Sleep extends Application {
+class Guess extends Application {
 
     function __construct() {
         parent::__construct();
@@ -21,12 +21,12 @@ class Sleep extends Application {
     function index() {
         $this->data['pagebody'] = 'justone';
 
-        $source = $this->quotes->first();
+        $source = $this->quotes->get(4);
         $this->data = array_merge($this->data, $source);
         $this->render();
     }
 
 }
 
-/* End of file Welcome.php */
-/* Location: application/controllers/Welcome.php */
+/* End of file Guess.php */
+/* Location: application/controllers/Guess.php */
